@@ -3,6 +3,7 @@ import 'package:weatherapp/models/weather_model.dart';
 import '../data/network_api_services.dart';
 
 class WeatherRepository {
+  // final iconRootUrl = "https://openweathermap.org/img/wn/{0}.png";
   final _apiService = NetworkApiServices();
   Future<List<String>> getCities() async {
     await Future.delayed(const Duration(microseconds: 300));
