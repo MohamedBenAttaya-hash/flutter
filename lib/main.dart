@@ -14,19 +14,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(title: 'Weather', getPages: [
-      GetPage(
-        name: '/',
-        page: () => const WeatherPage(),
-        transitionDuration: const Duration(milliseconds: 0),
-        transition: Transition.noTransition,
-      ),
-      GetPage(
-        name: '/cities',
-        page: () => const CitiesPage(),
-        transitionDuration: const Duration(milliseconds: 0),
-        transition: Transition.noTransition,
-      )
-    ]);
+    return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Weather',
+        getPages: [
+          GetPage(
+            name: '/',
+            page: () => const WeatherPage(),
+            transitionDuration: const Duration(milliseconds: 200),
+            transition: Transition.downToUp,
+          ),
+          GetPage(
+            name: '/cities',
+            page: () => const CitiesPage(),
+            transitionDuration: const Duration(milliseconds: 0),
+            transition: Transition.noTransition,
+          )
+        ]);
   }
 }
