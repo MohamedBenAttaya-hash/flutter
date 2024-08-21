@@ -1,20 +1,22 @@
 import 'package:weatherapp/models/weather_model.dart';
 
 import '../data/network_api_services.dart';
+import '../models/city_model.dart';
 
 class WeatherRepository {
   // final iconRootUrl = "https://openweathermap.org/img/wn/{0}.png";
   final _apiService = NetworkApiServices();
-  Future<List<String>> getCities() async {
+  Future<List<CityModel>> getCities() async {
     await Future.delayed(const Duration(microseconds: 300));
     return [
-      "tunis",
-      "paris",
-      "dakar",
-      "berlin",
-      "london",
-      "new york",
-      "moscow",
+      CityModel("tunis", "Tunis", "Tunisia"),
+      CityModel("paris", "paris", "France"),
+      CityModel("dakar", "Dakar", "Senegal"),
+      CityModel("berlin", "berlin", "Germany"),
+      CityModel("london", "London", "United kingdom"),
+      CityModel("new york", "new york", "United States of America"),
+      CityModel("nmoscow", "moscow", "Russia"),
+      // "tunis",
     ];
   }
 

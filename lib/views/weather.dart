@@ -25,7 +25,7 @@ class _WeatherPageState extends State<WeatherPage> {
     return Scaffold(
         appBar: AppBar(
           scrolledUnderElevation: 0,
-          title: const Center(child: Text('Weahter')),
+          title: const Center(child: Text('Weather')),
           automaticallyImplyLeading: false,
         ),
         body: Obx(() => Center(

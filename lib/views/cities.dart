@@ -31,12 +31,12 @@ class _CitiesPageState extends State<CitiesPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  for (var city in controller.cities)
+                  for (var city in controller.cities.value)
                     InkWell(
                         onTap: () {
-                          controller.navigateToWeather(city);
+                          controller.navigateToWeather(city.code!);
                         },
-                        child: Text(city)),
+                        child: Text(city.name ?? "")),
                 ],
               ),
             )));
